@@ -1,0 +1,7 @@
+<%= simple_form_for(@cocktail) do |f| %>
+  <div class="form-group form-input">
+    <%= f.input :name, placeholder: '. . .' %>
+  </div>
+
+  <%= f.submit "Create a new cocktail", class: 'form-button' %>
+<% end %>

@@ -1,6 +1,25 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  background-color: transparent;
+  height: 44px;
+  padding: 10px 28px 0 18px;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  h3 {
+    a {
+      font-weight: normal;
+      font-size: 20px;
+      text-decoration: none;
+      color: rgb(200, 200, 200);
+      &:hover {
+        color: #CA802C;
+        transition: 0.5s;
+      }
+    }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
