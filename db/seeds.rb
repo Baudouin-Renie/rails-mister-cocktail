@@ -10,9 +10,9 @@ require 'open-uri'
 
 Ingredient.destroy_all
 
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "Lemon")
+Ingredient.create(name: "Ice")
+Ingredient.create(name: "Mint leaves")
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 url_reader = open(url).read

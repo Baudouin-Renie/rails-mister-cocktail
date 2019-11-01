@@ -4,6 +4,22 @@
     <h1><%= @cocktail.name %></h1>
   </div>
   <div class="cocktail-show">
-
+    <h3>Small description</h3>
+    <p><%= @cocktail.small_description %></p>
+    <div class="box-flex" id="plus">
+      <h3>Ingredients</h3>
+      <%= link_to (raw("<i class='fas fa-plus-circle'></i>")), new_cocktail_dose_path(@cocktail) %>
+    </div>
+    <ul>
+      <% @cocktail.doses.each do |dose| %>
+        <div class="box-flex" id="trash">
+          <li><%= dose.ingredient.name %>: <%= dose.description %></li>
+          <%= link_to (raw("<i class='far fa-trash-alt'></i>")), dose_path(dose),
+            method: :delete,
+            data: { confirm: "Are you sure you want to delete '#{dose.ingredient.name}'" }
+          %>
+        </div>
+      <% end %>
+    </ul>
   </div>
 </div>

@@ -4,9 +4,9 @@
     <h1>Want to celebrate something?</h1>
     <h3><a href="#below">Try our cocktails</a></h3>
     <div id="arrows">
-      <p><i class="fas fa-chevron-down"></i></p>
-      <p><i class="fas fa-chevron-down"></i></p>
-      <p><i class="fas fa-chevron-down"></i></p>
+      <h6><i class="fas fa-chevron-down"></i></h6>
+      <h6><i class="fas fa-chevron-down"></i></h6>
+      <h6><i class="fas fa-chevron-down"></i></h6>
     </div>
   </div>
 </div>
@@ -15,9 +15,7 @@
   <h2 class="text-center">Choose your favourite cocktail</h2>
   <div class="row justify-content-center" id="below">
     <% @cocktails.each do |cocktail| %>
-      <div class="card-cocktail text-center">
-        <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
-      </div>
+      <%= link_to (raw("<div class='card-cocktail text-center'><h3>#{cocktail.name}</h3></div>")), cocktail_path(cocktail) %>
     <% end %>
   </div>
 </div>

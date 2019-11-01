@@ -1,1 +1,10 @@
-
+<div class="header">
+  <%= render "layouts/navbar" %>
+  <div class="text-center header-info">
+    <h1>New ingredient</h1>
+    <p><%= link_to @cocktail.name, cocktail_path(@cocktail) %></p>
+  </div>
+  <div class="dose-new">
+    <%= render 'form', dose: @dose, cocktail: @cocktail %>
+  </div>
+</div>

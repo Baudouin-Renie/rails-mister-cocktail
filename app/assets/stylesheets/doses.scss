@@ -1,3 +1,32 @@
 // Place all the styles related to the doses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.dose-new {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: rgba(90, 90, 90, 0.6);
+  border: 1px solid rgb(40, 40, 40);
+  border-radius: 5px;
+  padding: 18px 20px 24px 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  font-family: $oswald;
+  label {
+    color: white;
+    margin-bottom: 10px;
+  }
+  input {
+    border-radius: 4px;
+  }
+  .form-input {
+    input, select {
+      color: white;
+      padding-top: 6px;
+      background-color: transparent;
+    }
+  }
+  input::placeholder {
+    color: rgb(220, 220, 220);
+    font-size: 15px;
+  }
+}
