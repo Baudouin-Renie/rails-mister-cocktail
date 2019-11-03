@@ -19,7 +19,7 @@ class DosesController < ApplicationController
     @dose = Dose.find(params[:id])
     @dose.destroy
 
-    # redirect_to request.referrer
+    redirect_to request.referrer
   end
 
   private

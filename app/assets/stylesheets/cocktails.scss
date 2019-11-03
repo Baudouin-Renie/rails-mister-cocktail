@@ -1,6 +1,10 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Smooth scrolling for anchors
+html { scroll-behavior: smooth }
+
 $abril: 'Abril Fatface', cursive;
 $oswald: 'Oswald', sans-serif;
 $orange: $orange;
@@ -23,7 +27,7 @@ a:hover {
   font-family: $abril;
   h1 {
     font-size: 44px;
-    margin-top: 20px;
+    padding-top: 60px;
   }
   h3 {
     margin-left: 5px;
@@ -49,7 +53,7 @@ a:hover {
 
 }
 
-#arrows {
+.arrows {
   margin-left: 16px;
   i {
     font-size: 40px;
@@ -57,11 +61,18 @@ a:hover {
   }
 }
 
+.java {
+  i {
+    transition: 0.5s color ease;
+    color: $orange;
+  }
+}
+
 #cards-cocktails {
-  padding-top: 35px;
+  padding-top: 38px;
   width: 100%;
   height: auto;
-  padding-bottom: 38px;
+  padding-bottom: 25px;
   h2 {
     font-size: 31px;
     margin-bottom: 38px;
@@ -175,6 +186,24 @@ a:hover {
   }
 }
 
+.box-flex2 {
+  display: flex;
+  justify-content: space-between;
+  i {
+    color: black;
+    font-size: 26px;
+    margin-right: 7px;
+    &:hover {
+      color: $orange;
+      transition: 0.3s;
+    }
+  }
+}
+
+#first {
+  font-size: 25px;
+}
+
 #plus {
   i {
     font-size: 25px;
@@ -185,4 +214,8 @@ a:hover {
   i {
     font-size: 19px;
   }
+}
+
+#debug {
+  color: transparent;
 }

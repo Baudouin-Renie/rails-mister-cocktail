@@ -1,21 +1,23 @@
+<%= render "layouts/navbar" %>
+
 <div class="header">
-  <%= render "layouts/navbar" %>
   <div class="text-center header-info">
     <h1>Want to celebrate something?</h1>
-    <h3><a href="#below">Try our cocktails</a></h3>
-    <div id="arrows">
-      <h6><i class="fas fa-chevron-down"></i></h6>
-      <h6><i class="fas fa-chevron-down"></i></h6>
-      <h6><i class="fas fa-chevron-down"></i></h6>
+    <h3><a href="#below" id="title">Try our cocktails</a></h3>
+    <div class="arrows">
+      <h6 id="arrow1"><i class="fas fa-chevron-down"></i></h6>
+      <h6 id="arrow2"><i class="fas fa-chevron-down"></i></h6>
+      <h6 id="arrow3"><i class="fas fa-chevron-down"></i></h6>
     </div>
   </div>
 </div>
 
 <div class="container" id="cards-cocktails">
-  <h2 class="text-center">Choose your favourite cocktail</h2>
-  <div class="row justify-content-center" id="below">
+  <h2 class="text-center" id="below">Choose your favourite cocktail</h2>
+  <div class="row justify-content-center">
     <% @cocktails.each do |cocktail| %>
-      <%= link_to (raw("<div class='card-cocktail text-center'><h3>#{cocktail.name}</h3></div>")), cocktail_path(cocktail) %>
+      <%= link_to (raw("<div data-aos='zoom-in' class='card-cocktail text-center'><h3>#{cocktail.name}</h3></div>")), cocktail_path(cocktail) %>
     <% end %>
   </div>
 </div>
+<p id="debug">DEBUGGING</p>
