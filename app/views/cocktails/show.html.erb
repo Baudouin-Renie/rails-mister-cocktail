@@ -21,7 +21,7 @@
       <%= link_to (raw("<i class='fas fa-plus-circle'></i>")), new_cocktail_dose_path(@cocktail) %>
     </div>
     <% if @cocktail.doses == [] %>
-      <p id="padding-add">There is no ingredient in this recipe yet. Please add some.</p>
+      <p id="padding-add">There is no ingredient in this recipe yet. Do not hesitate to add some.</p>
     <% end %>
     <ul>
       <% @cocktail.doses.each do |dose| %>
