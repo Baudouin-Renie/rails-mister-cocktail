@@ -147,10 +147,14 @@ a:hover {
   }
 }
 
+#padding-add {
+  padding-top: 5px;
+}
+
 .cocktail-show {
-  width: 1100px;
   margin: 0 auto;
   margin-top: 50px;
+  width: 1100px;
   height: auto;
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid rgb(40, 40, 40);
@@ -160,7 +164,7 @@ a:hover {
   h3 {
   font-family: $oswald;
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   }
   p {
     font-size: 18px;
@@ -173,6 +177,32 @@ a:hover {
   li {
     line-height: 32px;
     font-size: 18px;
+  }
+}
+
+.cocktail-image {
+  position: fixed;
+  background-color: rgba(80, 80, 80, 0.8);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  &:target {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
   }
 }
 
@@ -194,7 +224,7 @@ a:hover {
   justify-content: space-between;
   i {
     color: black;
-    font-size: 26px;
+    font-size: 24px;
     margin-right: 7px;
     &:hover {
       color: $orange;
@@ -203,8 +233,12 @@ a:hover {
   }
 }
 
-#first {
+#edit {
   font-size: 25px;
+}
+
+#first {
+  margin-right: 5px;
 }
 
 #plus {
@@ -223,6 +257,14 @@ a:hover {
   color: transparent;
 }
 
-.images-added {
-  display: flex;
+.quit {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: white;
+  font-size: 45px;
+  &:hover {
+    color: rgb(150, 150, 150);
+    transition: 0.5s;
+  }
 }
