@@ -11,23 +11,23 @@ const initOrangeArrows = () => {
 
     setTimeout(function() {
       arrow2.classList.add('java');
-    }, 1500);
+    }, 1000);
 
     setTimeout(function() {
       arrow3.classList.add('java');
-    }, 2500);
+    }, 1500);
 
     setTimeout(function() {
       arrow1.classList.remove('java');
-    }, 4000);
+    }, 2000);
 
     setTimeout(function() {
       arrow2.classList.remove('java');
-    }, 5000);
+    }, 2500);
 
     setTimeout(function() {
       arrow3.classList.remove('java');
-    }, 6000);
+    }, 3000);
   });
 }
 
