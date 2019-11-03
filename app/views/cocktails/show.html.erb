@@ -3,32 +3,37 @@
   <div class="text-center header-info">
     <h1><%= @cocktail.name %></h1>
   </div>
-  <div class="cocktail-show">
-    <div class="box-flex2">
-      <h3>Small description</h3>
-      <div>
-        <%= link_to (raw("<i class='far fa-edit' id='first'></i>")), edit_cocktail_path(@cocktail) %>
-        <%= link_to (raw("<i class='far fa-trash-alt'></i>")), cocktail_path(@cocktail),
-          method: :delete,
-          data: { confirm: "Are you sure you want to delete '#{@cocktail.name}'" }
-        %>
-      </div>
-    </div>
-    <p><%= @cocktail.small_description %></p>
-    <div class="box-flex" id="plus">
-      <h3>Ingredients</h3>
-      <%= link_to (raw("<i class='fas fa-plus-circle'></i>")), new_cocktail_dose_path(@cocktail) %>
-    </div>
-    <ul>
-      <% @cocktail.doses.each do |dose| %>
-        <div class="box-flex" id="trash">
-          <li><%= dose.ingredient.name %>: <%= dose.description %></li>
-          <%= link_to (raw("<i class='far fa-trash-alt'></i>")), dose_path(dose),
+  <div class="images-added">
+    <div class="cocktail-show">
+      <div class="box-flex2">
+        <h3>Small description</h3>
+        <div>
+          <%= link_to (raw("<i class='far fa-edit' id='first'></i>")), edit_cocktail_path(@cocktail) %>
+          <%= link_to (raw("<i class='far fa-trash-alt'></i>")), cocktail_path(@cocktail),
             method: :delete,
-            data: { confirm: "Are you sure you want to delete '#{dose.ingredient.name}'" }
+            data: { confirm: "Are you sure you want to delete '#{@cocktail.name}'" }
           %>
         </div>
-      <% end %>
-    </ul>
+      </div>
+      <p><%= @cocktail.small_description %></p>
+      <div class="box-flex" id="plus">
+        <h3>Ingredients</h3>
+        <%= link_to (raw("<i class='fas fa-plus-circle'></i>")), new_cocktail_dose_path(@cocktail) %>
+      </div>
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <div class="box-flex" id="trash">
+            <li><%= dose.ingredient.name %>: <%= dose.description %></li>
+            <%= link_to (raw("<i class='far fa-trash-alt'></i>")), dose_path(dose),
+              method: :delete,
+              data: { confirm: "Are you sure you want to delete '#{dose.ingredient.name}'" }
+            %>
+          </div>
+        <% end %>
+      </ul>
+    </div>
+    <div class="cocktail-image">
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+    </div>
   </div>
 </div>

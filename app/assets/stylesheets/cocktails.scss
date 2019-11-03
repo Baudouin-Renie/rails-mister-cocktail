@@ -129,10 +129,13 @@ a:hover {
     color: rgb(240, 240, 240);
     font-size: 15px;
   }
+  .form-photo {
+    color: white;
+  }
 }
 
 .form-button {
-  margin-top: 8px;
+  margin-top: 6px;
   height: 40px;
   padding: 0 10px;
   background-color: transparent;
@@ -218,4 +221,8 @@ a:hover {
 
 #debug {
   color: transparent;
+}
+
+.images-added {
+  display: flex;
 }

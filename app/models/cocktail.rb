@@ -4,4 +4,6 @@ class Cocktail < ApplicationRecord
 
   validates :name, presence: true, uniqueness: true
   validates :small_description, presence: true
+
+  mount_uploader :photo, PhotoUploader
 end
